@@ -51,7 +51,7 @@ stages:
     - script: mkdir -p ./ArtifactPublishLocation
       displayName: 'Make sure the Artifact folder is avalaible'
       
-    - task: TerraformInstaller@0
+    - task: 11645770-d18e-11e8-8f5b-1b8b62612b3b@0
       displayName: 'Use Terraform $(terraform_version)'
       inputs:
         terraformVersion: $(terraform_version)
@@ -130,7 +130,7 @@ stages:
               archiveFilePatterns: '$(System.ArtifactsDirectory)/$(PackageName1).tar.gz'
               destinationFolder: './$(PackageName1)'
 
-          - task: TerraformInstaller@0
+          - task: 11645770-d18e-11e8-8f5b-1b8b62612b3b@0
             condition: eq(variables['package_available'], 'yes') # this task will only run if the package is available
             displayName: 'Use Terraform $(terraform_version)'
             inputs:
@@ -185,7 +185,7 @@ stages:
               archiveFilePatterns: '$(System.ArtifactsDirectory)/$(PackageName1).tar.gz'
               destinationFolder: './$(PackageName1)'
 
-          - task: TerraformInstaller@0
+          - task: 11645770-d18e-11e8-8f5b-1b8b62612b3b@0
             condition: eq(variables['package_available'], 'yes') # this task will only run if the package is available
             displayName: 'Use Terraform $(terraform_version)'
             inputs:
