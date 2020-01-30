@@ -15,7 +15,7 @@ variables:
   - name: vmImageName
     value: "ubuntu-latest"
   - name: backend_main_secret_file_id1 # secret id located in your Azure DevOps library, file used by the following cmdlet Terraform init, plan, apply and destroy
-    value: "backend-main-jdld-1.json"
+    value: "main-ev.json"
   - name: artifact_name
     value: "AzureDevops-Introduction"
 
