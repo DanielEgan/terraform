@@ -4,7 +4,7 @@
 # Core
 ###
 
-rg_infr_name = "infr-jdld-noprd-rg1"
+rg_infr_name = "infr-jdld-nonprd-rg1"
 
 ###
 # Log & Certificate
