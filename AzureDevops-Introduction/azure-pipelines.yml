@@ -30,7 +30,7 @@ trigger:
     - AzureDevops-Introduction/*
 
 stages:
-- stage: Build
+- stage: Plan
   jobs:
   - job: Terraform_Plan
     displayName: Terraform Plan - Publish an package if Infrastructure changes are identified
@@ -93,8 +93,8 @@ stages:
         artifactName: '$(ArtifactName)'
         targetPath: './ArtifactPublishLocation' # Local path to include in the Artifact
 
-- stage: Deploy
-  dependsOn: Build
+- stage: Apply
+  dependsOn: Plan
   jobs:
     # track deployments on the environment
   - deployment: Terraform_Apply
@@ -141,8 +141,8 @@ stages:
             displayName: 'Terraform Apply'
             workingDirectory: './$(PackageName1)'
 
-- stage: Deliver
-  dependsOn: Deploy
+- stage: Destroy
+  dependsOn: Apply
   jobs:
     # track deployments on the environment
   - deployment: Terraform_Destroy
