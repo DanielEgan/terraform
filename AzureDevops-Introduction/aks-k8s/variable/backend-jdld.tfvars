@@ -1,5 +1,5 @@
 #Variables initialization
-resource_group_name = "infr-jdld-noprd-rg1"
+resource_group_name = "infr-jdld-nonprd-rg1"
 
 storage_account_name = "akssample123456" #Name must be unique
 
