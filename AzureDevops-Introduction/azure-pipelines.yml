@@ -21,9 +21,10 @@ variables:
 
 resources:
   repositories:
-    - repository: Yaml_Templates # identifier (A-Z, a-z, 0-9, and underscore)
-      type: git #git refers to Azure Repos Git repos
-      name: Template/template_pipeline #To refer to a repo in another project within the same organization, prefix the name with that project's name. For example, OtherProject/otherRepo.
+    - repository: terraform # identifier (A-Z, a-z, 0-9, and underscore)
+      type: github #git refers to Azure Repos Git repos
+      endpoint: DanielEgan #name of repo owner
+      name: DanielEgan/terraform #To refer to a repo in another project within the same organization, prefix the name with that project's name. For example, OtherProject/otherRepo.
       ref: refs/tags/0.1.0 # ref name to use, defaults to 'refs/heads/master'
 
 trigger:
