@@ -23,8 +23,8 @@ resources:
   repositories:
     - repository: terraform # identifier (A-Z, a-z, 0-9, and underscore)
       type: github #git refers to Azure Repos Git repos
-      endpoint: DanielEgan/terraform #name of repo owner
-      name: github
+      endpoint: danielegan/terraform #name of repo owner
+      name: MyGithubServiceConnection
       
 
 trigger:
